@@ -13,10 +13,6 @@ __pycache__/
 # Jupyter Notebook checkpoints (if any)
 .ipynb_checkpoints/
 
-# Model files (if you're not sharing the model)
-*.h5
-*.pkl
-*.joblib
 
 # OS files
 .DS_Store
