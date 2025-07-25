@@ -10,7 +10,7 @@ st.set_page_config(page_title="IMDB Sentiment Analyzer", page_icon="🎬")
 # ✅ Load model
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("simple_rnn_model.keras")
+    return tf.keras.models.load_model("simple_rnn_model.h5")
 
 model = load_model()
 
