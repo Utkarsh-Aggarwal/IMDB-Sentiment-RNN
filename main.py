@@ -8,7 +8,7 @@ import streamlit as st
 word_index = imdb.get_word_index()
 reverse_word_index = {value: key for key, value in word_index.items()}
 #load the model
-model = load_model("simple_rnn_model.h5")
+model = load_model("simple_rnn_model.keras", compile=False)  # Add compile=False to avoid config issues
 
 def decode_review(text):
     return ' '.join([reverse_word_index.get(i - 3, '?') for i in text])
@@ -40,4 +40,4 @@ if st.button("Classify"):
     st.write(f"Sentiment: {sentiment}")
     st.write(f"Score: {prediction[0][0]}")
 else:
-    st.write("enter a movie review to classify its sentiment")
+    st.write("Enter a movie review to classify its sentiment.")
